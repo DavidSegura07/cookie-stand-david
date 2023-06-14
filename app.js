@@ -4,6 +4,7 @@ console.log('hi');
 let seattleSales = document.getElementById('seattleSales');
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
+
 const seattle = {
   location: 'Seattle',
   min: 23,
@@ -51,7 +52,6 @@ const tokyo = {
   generateCookiesSales: function () {
     for (let i = 0; i < hours.length; i++) {
       let customers = this.getRandomCustomers();
-      console.log(customers);
       let totalSoldThisHour = Math.ceil(customers * this.avg);
       this.cookiesSoldEachHour.push(totalSoldThisHour);
       this.dailyTotal = this.dailyTotal + totalSoldThisHour;
@@ -85,7 +85,6 @@ const dubai = {
   generateCookiesSales: function () {
     for (let i = 0; i < hours.length; i++) {
       let customers = this.getRandomCustomers();
-      console.log(customers);
       let totalSoldThisHour = Math.ceil(customers * this.avg);
       this.cookiesSoldEachHour.push(totalSoldThisHour);
       this.dailyTotal = this.dailyTotal + totalSoldThisHour;
@@ -119,7 +118,6 @@ const paris = {
   generateCookiesSales: function () {
     for (let i = 0; i < hours.length; i++) {
       let customers = this.getRandomCustomers();
-      console.log(customers);
       let totalSoldThisHour = Math.ceil(customers * this.avg);
       this.cookiesSoldEachHour.push(totalSoldThisHour);
       this.dailyTotal = this.dailyTotal + totalSoldThisHour;
@@ -153,7 +151,6 @@ const lima = {
   generateCookiesSales: function () {
     for (let i = 0; i < hours.length; i++) {
       let customers = this.getRandomCustomers();
-      console.log(customers);
       let totalSoldThisHour = Math.ceil(customers * this.avg);
       this.cookiesSoldEachHour.push(totalSoldThisHour);
       this.dailyTotal = this.dailyTotal + totalSoldThisHour;
@@ -172,3 +169,42 @@ const lima = {
   }
 };
 lima.render();
+
+let storeFront = [seattle,paris,tokyo,lima,dubai];
+
+let table = document.getElementById('table');
+let row = document.createElement('tr');
+let hoursEl = document.createElement('td');
+hoursEl.textContent = '';
+row.appendChild(hoursEl);
+
+
+for (let i = 0; i < hours.length; i++) {
+  let tableHeader = document.createElement('th');
+  tableHeader.textContent = `${hours[i]}`;
+  let hour = document.createElement('td');
+  hour.textContent = `${hours[i]}`;
+  row.appendChild(hour);
+}
+table.appendChild(row);
+
+
+
+for (let i = 0; i < storeFront.length; i++) {
+  let storeRow = document.createElement('tr');
+  let storeData = document.createElement('td');
+  storeData.textContent = `${storeFront[i].location}`;
+  storeRow.appendChild(storeData);
+  for (let j = 0; j < storeFront[i].cookiesSoldEachHour.length; j++) {
+    let cookiesThisHour = document.createElement('td');
+    cookiesThisHour.textContent = storeFront[i].cookiesSoldEachHour[j];
+    storeRow.appendChild(cookiesThisHour);
+  }
+
+
+
+  table.appendChild(storeRow);
+}
+
+
+
