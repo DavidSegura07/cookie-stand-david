@@ -1,19 +1,69 @@
+header {
+  width: 960px;
+  background-color: rgb(233, 4, 4);
+  margin: auto;
+
+
+}
+
+main {
+  width: 960px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin:auto;
+  margin-top: 30px;
+  background-color: aquamarine;
+}
+nav {
+  width: 960px;
+  margin: auto;
+  padding: 1rem 0;
+}
+image{
+  margin-bottom: 30px;
+}
+main image {
+  display: flex;
+
+}
+
+article
+article > div {
+  height: 320px;
+  width: 450px;
+  overflow: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 table {
   border: 1pm;
 }
-
+tr:nth-child(even) {background-color: hsl(0, 95%, 78%);}
 table, td, th {
   border: 1px solid rgb(112, 159, 165);
 }
 table {
-  margin: 1rem;
+  margin: 3rem;
 }
 td, th {
-  padding: rem;
+  padding: 3px;
 }
 th {
   font-weight: bold;
 }
 tfoot {
-  background-color: rgba(112, 159, 165, .1);
+
+  background-color: rgba(0, 0, 0, 0.1);
 }
