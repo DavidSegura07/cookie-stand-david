@@ -110,6 +110,33 @@ dubai.render();
 paris.render();
 lima.render();
 generateFooter();
+
+
+
+//Form
+let form = document.getElementById('form');
+
+function handleSubmit(event) {
+  event.preventDefault();
+
+  let newLocation = event.target.newLocation.value;
+  let minCustomers = parseInt(event.target.minCustomers.value);
+  let maxCustomers = parseInt(event.target.maxCustomers.value);
+  let averageBuy = parseInt(event.target.averageBuy.value);
+
+  let newStoreLocation = new Store(
+    newLocation,
+    minCustomers,
+    maxCustomers,
+    averageBuy);
+
+    console.log(newStoreLocation);
+};
+form.addEventListener('submit',handleSubmit);
+
+
+///////////////////////////////////////////////////////////////////////////////
+// Old Code saving for later.
 // function footer() {
 //   for (let i = 0; i < hours.length; i++) {
 //     let totalSold = document.createElement('td');
