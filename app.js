@@ -130,9 +130,11 @@ function handleSubmit(event) {
     maxCustomers,
     averageBuy);
 
-    console.log(newStoreLocation);
+  console.log(newStoreLocation);
+  newStoreLocation.render();
 };
-form.addEventListener('submit',handleSubmit);
+
+form.addEventListener('submit', handleSubmit);
 
 
 ///////////////////////////////////////////////////////////////////////////////

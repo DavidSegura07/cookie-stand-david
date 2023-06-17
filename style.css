@@ -1,63 +1,106 @@
-header {
-  width: 960px;
-  background-color: rgb(62, 62, 62);
-  margin: auto;
-
-
+* {
+  border: 5 px;
 }
-ul {
+
+header {
+
+
+  width: 960px;
+  background-color: #FF8427;
+  margin: auto;
+}
+
+header ul {
   width: 960px;
   display: flex;
   justify-content: space-between;
-  margin
 }
 
+nav {
+  width: 960px;
+  margin: auto;
+  padding: 1rem 0;
+}
+li img {
+  width: 200px;
+  display: flex;
+
+
+}
+li {
+display: flex;
+align-items: flex-end;
+justify-content:space-between;
+
+
+}
 main {
   width: 960px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin:auto;
-  margin-top: 30px;
-  padding-top: 50px;
-}
-nav {
-  width: 960px;
   margin: auto;
-  padding: 1rem 0;
-}
-main image{
-  margin-bottom: 30px;
-}
+  margin-top: 3px;
+  background-color: #58B09C;
 
+}
+h1 {
+font-size: 3rem;
+}
+main img:first-child {
+  width: 100%;
+  height: 100%;
+}
+img {
+  padding-bottom: 20px;
+
+
+}
+img:nth-of-type(2) {
+  width: 300px;
+  height: 375px;
+}
+img:nth-of-type(3) {
+  width: 300px;
+  height: 375px;
+}
+img:nth-of-type(5) {
+  width: 480px;
+  height: 400px;
+  max-width: 100%;
+  height: auto;
+}
 article {
   width: 450px;
 }
 
-article > h3 {
+article>h3 {
   font-size: 3rem;
 }
-article > div {
-height: 320px;
-overflow: auto;
-padding-bottom: 4rem;
+
+article>div {
+  height: 320px;
+  overflow: auto;
+  padding-bottom: 4rem;
 }
 
-div > article {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+div>article {
+  background-color: #4CAF50;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
- article a {
+article a {
   font-size: 2rem;
-  background-color: #df0000; /* Green */
+  background-color:#3C1518;
+  /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -67,8 +110,13 @@ div > article {
   font-size: 16px;
   border-radius: 8px;
 }
+h3 {
+  color: #02394A;
+}
 
-
+p {
+  color: #3C1518;
+}
 
 
 
@@ -80,19 +128,30 @@ div > article {
 table {
   border: 1px;
 }
-tr:nth-child(even) {background-color: hsl(0, 95%, 78%);}
-table, td, th {
+
+tr:nth-child(even) {
+  background-color: hsl(0, 95%, 78%);
+}
+
+table,
+td,
+th {
   border: 1px solid rgb(112, 159, 165);
 }
+
 table {
   margin: 3rem;
 }
-td, th {
+
+td,
+th {
   padding: 3px;
 }
+
 th {
   font-weight: bold;
 }
+
 tfoot {
 
   background-color: rgba(0, 0, 0, 0.1);
