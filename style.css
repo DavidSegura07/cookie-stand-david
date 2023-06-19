@@ -1,5 +1,5 @@
 * {
-  border: 5 px;
+  border: 5px;
 }
 
 header {
@@ -21,7 +21,7 @@ nav {
   margin: auto;
   padding: 1rem 0;
 }
-li img {
+header ul li:first-child img {
   width: 200px;
   display: flex;
 
@@ -48,14 +48,13 @@ main {
 h1 {
 font-size: 3rem;
 }
-main img:first-child {
-  width: 100%;
+main img:nth-of-type(1) {
+  width: 960px;
   height: 100%;
+
 }
 img {
   padding-bottom: 20px;
-
-
 }
 img:nth-of-type(2) {
   width: 300px;
@@ -110,6 +109,7 @@ article a {
   font-size: 16px;
   border-radius: 8px;
 }
+
 h3 {
   color: #02394A;
 }
@@ -117,8 +117,13 @@ h3 {
 p {
   color: #3C1518;
 }
+main img:last-of-type {
+  width: 960px;
+  height: 100%;
+  display: flex;
+  padding-top: 20px;
 
-
+}
 
 
 
